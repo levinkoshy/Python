@@ -1,0 +1,200 @@
+"abc" * 2
+/abcabc
+
+2*10
+20
+
+//Lists
+
+List_var = ["a","b","c"]
+List_var.append("d")
+
+List_var.pop()-- gives the last element //removes the element from list
+List_var.pop(1)-- removes the 1-indexed element from the list
+
+//length of list
+len(List_var)
+
+//length of string
+s= "abcdef"
+len(s)  //6
+
+//+=
+>>> List_var += "New"
+>>> List_var
+['a', 'b', {'a': 'b', 'Key2': 'Value2', 'Key1': 'Value1', 'list': [...], 'Key-dict': {...}}, 'N', 'e', 'w']
+
+//Dictionaries- Key-value pairs
+a_dict ={
+... "Key1":"Value1",
+... "Key2":"Value2"
+}
+
+a_dict
+{'Key2': 'Value2', 'Key1': 'Value1'}
+
+a_dict.items()-- gives a list of key value pairs separated by ","
+[('Key2', 'Value2'), ('Key1', 'Value1')]
+
+
+a_dict["a"]="b" // adds another key-value pair to the dictionary
+
+list-- we have to use the position number
+dictionary - we can use the key
+
+//we can put a list in the dictionary
+a_dict["list"]= List_var
+>>> a_dict["list"]= List_var
+>>> a_dict
+{'a': 'b', 'Key2': 'Value2', 'Key1': 'Value1', 'list': ['a', 'b']}
+
+
+//we can put a dictionary inside a dictionary
+a_dict["Key-dict"]=a_dict
+
+//We can put a dictionary inside a list
+ List_var.append(a_dict)
+>>> List_var
+['a', 'b', {'a': 'b', 'Key2': 'Value2', 'Key1': 'Value1', 'list': [...], 'Key-dict': {...}}]
+>>>
+
+//Also list inside a list
+
+//Tuples - are 2 value paire
+
+>>> tup =(("a1","a2"),
+... ("b1","b2"),
+... ("c1","c2"))
+>>> tup
+(('a1', 'a2'), ('b1', 'b2'), ('c1', 'c2'))
+
+>>> tup[0][1]
+'a2' 
+
+
+>>> tup += ("d1","d2")
+>>> tup
+(('a1', 'a2'), ('b1', 'b2'), ('c1', 'c2'), 'd1', 'd2')
+>>> tup += (("e1",2))
+>>> tup
+(('a1', 'a2'), ('b1', 'b2'), ('c1', 'c2'), 'd1', 'd2', 'e1', 2)
+>>> tup += (("e1",2),)
+>>> tup
+(('a1', 'a2'), ('b1', 'b2'), ('c1', 'c2'), 'd1', 'd2', 'e1', 2, ('e1', 2))
+>>>
+
+for i in lis_var:
+
+>>> for i in List_var:
+...     print(i)
+...
+a
+b
+{'a': 'b', 'Key2': 'Value2', 'Key1': 'Value1', 'list': ['a', 'b', {...}, 'N', 'e', 'w'], 'Key-dict': {...}}
+N
+e
+w
+
+//Boolean
+>>> print(100-1 ==90)
+False
+
+>>> print(100-1 !=90)
+True
+
+>>> print(100-1 is 90)
+False
+
+
+print(3**3==27)
+
+//if-else
+
+List_b = [1,2,3]
+
+
+>>> for i in List_b:
+...     if i==2:
+...             print("two")
+...     elif i==1:
+...             print("one")
+...     else:
+...             print("three")
+...
+one
+two
+three
+
+//comparison
+>>> isinstance(3,int)
+True
+>>>
+
+>>> isinstance("abc",str)
+True
+>>>
+
+List_c =["Levin","Koshy","Vaidyan","kerala",1,567,890,123]
+
+>>> List_d=[]
+>>> for i in List_c:
+...     if isinstance(i,int):
+...             List_d.append(i)
+...
+>>> List_d
+[1, 567, 890, 123]
+>>>
+
+//For separating numbers and strings
+//x - because for pop- we need the index instead of item
+x=0
+for i in List_c:
+...     if isinstance(i,int):
+...             List_F.append(i)
+...             List_c.pop(x)
+		x += 1
+
+
+//Sorting
+str_items.sort()
+//If there is different cases, It will be sorted based on Capital case, Lower case comes last
+['AD','Abc',....'aaa'] //sample output
+
+str_items.sort(key=str.lower) // gives out proper sorting
+
+str_items.sort(key=str.lower, reverse=True)
+
+new_items = sorted(str_items)
+
+new_items = sorted(str_items, key=str.lower)
+
+new_items = sorted(str_items, key=str.lower, reverse=True)
+
+//For numbers
+int_items.sort()
+int_items.sort(reverse)
+
+new_int_items = sorted(int_items, reverse=True)
+
+//Sum
+sum(int_items)
+
+//Python 2 - Average ..5/2 will give out 2; to get 2.5 --5/2*1.0
+
+//string manipulation
+>>> text = 'Sometimes it\'s your quote sometimes it isn\'t'
+>>> print(text)
+#Sometimes it's your quote sometimes it isn't
+
+text = "This is another {variable_a} formatted string with \
+multiple variables like {a} {b} {c}.".format(
+    variable_a="variable based", 
+    a="some random", b="replacement", c="text")
+print(text)
+
+text = "This is %s formatted string" %("replacement")
+print(text)
+
+text = "The %%s format string is not as %s, but still very %s." %("robust", "useful")
+print(text)
+
