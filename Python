@@ -83,7 +83,7 @@ a_dict["Key-dict"]=a_dict
 (('a1', 'a2'), ('b1', 'b2'), ('c1', 'c2'), 'd1', 'd2', 'e1', 2, ('e1', 2))
 >>>
 
-for i in lis_var:
+for i in list_var:
 
 >>> for i in List_var:
 ...     print(i)

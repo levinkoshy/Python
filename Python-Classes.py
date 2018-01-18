@@ -10,7 +10,7 @@ class Dog():
 #creating objects/instances of the class
 
 //Class - example Human beings ; Object: People
-//Objects can have common features of their class; as well as different features
+//Objects can have common features of their class; as well as different features which may not be a characteristic of the class
 
 instance = Dog()
 obj = Dog()
@@ -90,7 +90,7 @@ reminder the purcase total was ${total}.
 Have a great one!
 Team CFE
 """
-    def add_user(self,name,amount,email=None):
+    def add_user(self,name,amount,email=None):  #keyword argument- email
         name = name[0].upper() + name[1:].lower()
         amount = "%.2f" %(amount)
         detail = {
@@ -140,3 +140,16 @@ obj.make_messages()
 //if the folder "Msg" contains a file "messages.py"
 //from Msg.messages import MessageUser
 
+
+from smtplib import SMTP, SMTPAuthenticationError, SMTPException
+...
+...
+...
+//Exception-handling
+try:
+    pass_wrong.login(username, "wrong_password")
+    pass_wrong.sendmail(from_email, to_list, "Hello there this is an email message")
+except SMTPAuthenticationError:
+    print("Could not login")
+except:
+    print("an error occured")
