@@ -1,0 +1,30 @@
+pip install virtualenv
+
+//pip-used to install python packages
+
+virtualenv -p "C:\Python3\python.exe" scrape && cd scrape
+
+.\Scripts\activate
+
+pip install requests beautifulsoup4
+
+python
+//Now inside the python shell
+
+import requests
+
+//Git request-- Getting request from the website
+
+url = "https://www.yelp.com/search?find_desc=Restaurants&find_loc=Des+Moines%2C+IA&ns=1"
+
+yelp_r = requests.get(url)
+yelp_r.status_code
+
+yelp_r.text
+
+from bs4 import BeautifulSoup
+
+yelp_soup = BeautifulSoup(yelp_r.text,'html.parser')
+
+print(yelp_soup.prettify())
+//makes html a lot cleaner
