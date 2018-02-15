@@ -16,7 +16,7 @@ while current_page < 201:
         businesses = yelp_soup.findAll('div', {'class': 'biz-listing-large'})
         for biz in businesses:
             #print(biz)
-            title = biz.findAll('a', {'class': 'biz-name'})[0].text
+            title = biz.findAll('a', {'class': 'biz-name'})[0].text #a - gets the hyperlinks
             print(title)
             second_line = ""
             first_line = ""

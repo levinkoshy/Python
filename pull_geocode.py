@@ -14,3 +14,4 @@ with open(r"C:\Users\levi3\OneDrive\Documents\DataChallenge_SayariAnalytics\csv_
         g = geocoder.google(each["address"]) 
         each["geocode"] = g.latlng 
         writer.writerow(each)
+

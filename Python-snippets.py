@@ -380,3 +380,6 @@ for p in items:
 print ",".join(value)
 
 "(D 300)(D 300)(W 200)(D 100)"
+
+##Frequency of an element in a list
+d = {x:a.count(x) for x in a}

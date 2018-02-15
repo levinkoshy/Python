@@ -9,7 +9,7 @@ class Dog():
 
 #creating objects/instances of the class
 
-//Class - example Human beings ; Object: People
+//Class - example Human beings ; Objects: men, women
 //Objects can have common features of their class; as well as different features which may not be a characteristic of the class
 
 instance = Dog()
@@ -122,6 +122,7 @@ Team CFE
         return []
 
 
+
 obj = MessageUser()
 obj.add_user("Justin", 123.32)
 obj.add_user("joHn", 94.23)
@@ -136,10 +137,12 @@ obj.make_messages()
 // from 'file_name' import MessageUser()
 
 
+__init__.py
 //if you create a python file in a folder; that folder will be considered as a python module
 //if the folder "Msg" contains a file "messages.py"
 //from Msg.messages import MessageUser
 
+#try block
 
 from smtplib import SMTP, SMTPAuthenticationError, SMTPException
 ...
@@ -153,3 +156,6 @@ except SMTPAuthenticationError:
     print("Could not login")
 except:
     print("an error occured")
+
+
+

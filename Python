@@ -36,6 +36,8 @@ a_dict
 a_dict.items()-- gives a list of key value pairs separated by ","
 [('Key2', 'Value2'), ('Key1', 'Value1')]
 
+a_dict.keys()
+a_dict.values()
 
 a_dict["a"]="b" // adds another key-value pair to the dictionary
 
