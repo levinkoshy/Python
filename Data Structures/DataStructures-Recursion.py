@@ -13,8 +13,10 @@ def fact(n):
 # rec_sum(4) = 4+3+2+1
 def rec_sum(n):
     
+    #Base Case
     if n == 0:
         return 0
+    #Recursion
     else:
         return n + sum(n-1)
 
@@ -23,8 +25,10 @@ def rec_sum(n):
 #Sum of the numbers of an integer
 def sum_func(n):
     
+    #Base Case
     if len(str(n)) == 1:
         return n
+    #Recursion
     else:
         return n%10 + sum_func(n//10)
 

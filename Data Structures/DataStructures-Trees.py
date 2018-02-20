@@ -126,7 +126,7 @@ levelOrderPrint(root)
 
 ------------------------------------------------------------------------
 # Trim binary search tree
-
+# Trimming the nodes which are not in between a minimum and maximum value
 # we use post order traversal - left,right,root
 
 def trimbst(tree,minVal,maxVal):
